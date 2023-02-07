@@ -39,8 +39,8 @@
   # colors
   colors = {
     focused          = { childBorder = "#cba6f7"; background = "#1e1e2e"; text = "#cdd6f4"; indicator = "#f9e2af"; border = "#cba6f7"; };
-    focusedInactive  = { childBorder = "#1e1e2e"; background = "#1e1e2e"; text = "#cdd6f4"; indicator = "#f9e2af"; border = "#1e1e2e"; };
-    unfocused        = { childBorder = "#1e1e2e"; background = "#1e1e2e"; text = "#cdd6f4"; indicator = "#f9e2af"; border = "#1e1e2e"; };
+    focusedInactive  = { childBorder = "#1e1e2e"; background = "#1e1e2e"; text = "#cdd6f4"; indicator = "#1e1e2e"; border = "#1e1e2e"; };
+    unfocused        = { childBorder = "#1e1e2e"; background = "#1e1e2e"; text = "#cdd6f4"; indicator = "#1e1e2e"; border = "#1e1e2e"; };
     urgent           = { childBorder = "#fab387"; background = "#1e1e2e"; text = "#fab387"; indicator = "#6c7086"; border = "#fab387"; };
     placeholder      = { childBorder = "#6c7086"; background = "#1e1e2e"; text = "#cdd6f4"; indicator = "#6c7086"; border = "#6c7086"; };
     background = "#1e1e2e";

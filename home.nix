@@ -59,6 +59,7 @@ in
     gnome.gedit
     gnome.gnome-screenshot
     gnome.nautilus
+    gnome.gvfs
     gnome.file-roller
     hey
     git
