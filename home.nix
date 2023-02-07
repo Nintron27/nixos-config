@@ -68,7 +68,16 @@ in
     # slack
     # obsidian
 
+    # langservers
     nil
+    gopls
+    nodePackages.typescript-language-server
+    nodePackages.vscode-json-languageserver
+    python39Packages.pylsp-mypy
+    rust-analyzer
+    taplo
+    nodePackages.yaml-language-server
+    lldb
 
     #unstable packages
     unstable.helix
