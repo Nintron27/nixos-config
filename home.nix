@@ -50,6 +50,7 @@ in
     tmux
     htop
     vlc
+    postman
     spotify
     solaar
     pavucontrol
