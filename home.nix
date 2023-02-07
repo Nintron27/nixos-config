@@ -45,12 +45,19 @@ in
     # desktop stuff
     i3lock
     playerctl
+    feh
+
+    # development
+    git
+    tmux
+    postman
+    #unstable for newer features faster
+    unstable.helix
+    hey
 
     # un-categorized packages
-    tmux
     htop
     vlc
-    postman
     spotify
     solaar
     pavucontrol
@@ -59,10 +66,7 @@ in
     gnome.gedit
     gnome.gnome-screenshot
     gnome.nautilus
-    gnome.gvfs
     gnome.file-roller
-    hey
-    git
     gimp
     firefox
     brave
@@ -80,9 +84,6 @@ in
     taplo
     nodePackages.yaml-language-server
     lldb
-
-    #unstable packages
-    unstable.helix
   ];
 
   ######################
