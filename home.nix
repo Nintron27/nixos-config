@@ -51,9 +51,9 @@ in
     git
     tmux
     postman
+    hey
     #unstable for newer features faster
     unstable.helix
-    hey
 
     # un-categorized packages
     htop
@@ -67,12 +67,14 @@ in
     gnome.gnome-screenshot
     gnome.nautilus
     gnome.file-roller
+    gnome.cheese
     gimp
     firefox
     brave
     discord
+    betterdiscordctl
     # slack
-    # obsidian
+    obsidian
 
     # langservers
     nil
@@ -86,9 +88,9 @@ in
     lldb
   ];
 
-  ######################
-  # Packages w/ Configs#
-  ######################
+  ###########################
+  # Packages and/or Configs #
+  ###########################
 
   # window manager
   xsession = {
@@ -101,6 +103,12 @@ in
     };
   };
 
+  # picom, currently broken, just want vSync but that crashes everything
+  # services.picom = {
+  #   enable = true;
+  #   vSync = true;
+  # };
+
   # polybar
   services.polybar = {
     enable = true;
@@ -109,6 +117,9 @@ in
   home.file.".config/polybar" = {
     source = ./config/polybar;
   };
+
+  # Set the cursor theme
+  home.file.".icons/default".source = "${pkgs.catppuccin-cursors.mochaLight}/share/icons/Catppuccin-Mocha-Light-Cursors";
 
   # application launcher
   programs.rofi = import ./config/rofi/config.nix;
@@ -129,6 +140,9 @@ in
   programs.starship = {
     enable = true;
     enableFishIntegration = true;
+    settings = {
+      add_newline = false;
+    };
   };
 
   # alacritty

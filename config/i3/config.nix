@@ -4,6 +4,26 @@
 
   window = {
     border = 2;
+    commands = [
+      {
+        command = "floating enable";
+        criteria = {
+          class = "File-roller";
+        };
+      }
+      {
+        command = "floating enable";
+        criteria = {
+          class = "org.gnome.Nautilus";
+        };
+      }
+      {
+        command = "floating enable";
+        criteria = {
+          class = "Gnome-screenshot";
+        };
+      }
+    ];
   };
 
   gaps = {
@@ -16,6 +36,11 @@
   startup = [
     {
       command = "exec $HOME/.config/polybar/launch.sh";
+      always = true;
+      notification = false;
+    }
+    {
+      command = "exec feh --bg-fill ~/.config/wallpaper.png";
       always = true;
       notification = false;
     }

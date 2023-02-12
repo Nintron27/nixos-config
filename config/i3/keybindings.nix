@@ -8,7 +8,6 @@ mod:
   #"${mod}+m" = "exec spotify";
   "${mod}+Return" = "exec alacritty";
   "${mod}+Shift+q" = "kill";
-  #"${mod}+Shift+h" = "exec dm-tool switch-to-greeter";
   #"${mod}+Alt+s" = "exec kill $(pgrep -f shutter); shutter -s";
 
   "XF86AudioRaiseVolume" = "exec amixer -q sset Master 10%+";
@@ -76,7 +75,8 @@ mod:
   "${mod}+Shift+9" = "move container to workspace 9";
   "${mod}+Shift+0" = "move container to workspace 10";
   
-  "${mod}+l" = "exec i3lock";
+  "${mod}+Ctrl+l" = "exec i3lock -c b4befe";
+  "${mod}+Ctrl+h" = "exec dm-tool switch-to-greeter";
   "${mod}+Ctrl+r" = "restart";
   "${mod}+Ctrl+x" = "exec \"i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'\"";
 }
