@@ -44,6 +44,11 @@
       always = true;
       notification = false;
     }
+    {
+      command = "exec solaar -w hide &";
+      always = true;
+      notification = false;
+    }
   #  { command = "exec firefox"; }
   #  { command = "exec steam"; }
   #  { command = "exec Discord"; }

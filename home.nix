@@ -59,7 +59,6 @@ in
     htop
     vlc
     spotify
-    solaar
     pavucontrol
     neofetch
     wcalc
