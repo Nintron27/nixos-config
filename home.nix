@@ -102,12 +102,6 @@ in
     };
   };
 
-  # picom, currently broken, just want vSync but that crashes everything
-  # services.picom = {
-  #   enable = true;
-  #   vSync = true;
-  # };
-
   # polybar
   services.polybar = {
     enable = true;
@@ -115,6 +109,19 @@ in
   };
   home.file.".config/polybar" = {
     source = ./config/polybar;
+  };
+
+  # GTK 2/3
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Catppuccin-Mocha-Standard-Mauve-Dark";
+      package = unstable.catppuccin-gtk.override {
+        accents = ["mauve"];
+        size = "standard";
+        variant = "mocha";
+      };
+    };
   };
 
   # Set the cursor theme
