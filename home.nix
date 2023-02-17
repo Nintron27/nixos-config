@@ -111,6 +111,20 @@ in
     source = ./config/polybar;
   };
 
+  # redshift
+  services.redshift = {
+    enable = true;
+    tray = true;
+
+    dawnTime = "05:30";
+    duskTime = "18:45";
+
+    temperature = {
+      day = 5500;
+      night = 3700;
+    };
+  };
+
   # GTK 2/3
   gtk = {
     enable = true;
