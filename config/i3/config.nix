@@ -35,17 +35,17 @@
 
   startup = [
     {
-      command = "exec $HOME/.config/polybar/launch.sh";
+      command = "$HOME/.config/polybar/launch.sh";
       always = true;
       notification = false;
     }
     {
-      command = "exec feh --bg-fill ~/.config/wallpaper.png";
+      command = "feh --bg-fill ~/.config/wallpaper.png";
       always = true;
       notification = false;
     }
     {
-      command = "exec solaar -w hide &";
+      command = "solaar -w hide &";
       always = true;
       notification = false;
     }
