@@ -25,19 +25,11 @@ mod:
   "${mod}+e" = "focus down";
   "${mod}+i" = "focus up";
   "${mod}+o" = "focus right";
-  #"${mod}+Left" = "focus left";
-  #"${mod}+Down" = "focus down";
-  #"${mod}+Up" = "focus up";
-  #"${mod}+Right" = "focus right";
 
   "${mod}+Shift+n" = "move left";
   "${mod}+Shift+e" = "move down";
   "${mod}+Shift+i" = "move up";
   "${mod}+Shift+o" = "move right";
-  #"${mod}+Shift+Left" = "move left";
-  #"${mod}+Shift+Down" = "move down";
-  #"${mod}+Shift+Up" = "move up";
-  #"${mod}+Shift+Right" = "move right";
 
   "${mod}+h" = "split h";
   "${mod}+v" = "split v";
