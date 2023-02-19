@@ -81,7 +81,7 @@ in
     nodePackages.typescript-language-server
     nodePackages.vscode-json-languageserver
     python39Packages.pylsp-mypy
-    rust-analyzer
+    unstable.rust-analyzer
     taplo
     nodePackages.yaml-language-server
     lldb
@@ -109,6 +109,12 @@ in
   };
   home.file.".config/polybar" = {
     source = ./config/polybar;
+  };
+
+  # dunst
+  services.dunst = {
+    enable = true;
+    configFile = ./config/dunst/dunstrc;
   };
 
   # redshift
@@ -184,9 +190,6 @@ in
     source = ./config/tmux/tmux.conf;
   };
 
-  # dunst
-  services.dunst = {
-    enable = true;
-    configFile = ./config/dunst/dunstrc;
-  };
+  # Go programming language
+  programs.go.enable = true;
 }
