@@ -70,7 +70,7 @@ in
     gimp
     firefox
     brave
-    discord
+    unstable.discord
     betterdiscordctl
     # slack
     obsidian
