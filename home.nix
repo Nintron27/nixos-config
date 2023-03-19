@@ -52,8 +52,12 @@ in
     tmux
     postman
     hey
+    vscodium
+    nodejs
     #unstable for newer features faster
+    unstable.flyctl
     unstable.helix
+    unstable.sqlc
 
     # un-categorized packages
     htop
@@ -74,6 +78,8 @@ in
     betterdiscordctl
     # slack
     obsidian
+    unstable.airshipper
+    filezilla
 
     # langservers
     nil
@@ -81,7 +87,6 @@ in
     nodePackages.typescript-language-server
     nodePackages.vscode-json-languageserver
     python39Packages.pylsp-mypy
-    unstable.rust-analyzer
     taplo
     nodePackages.yaml-language-server
     lldb
@@ -149,6 +154,10 @@ in
 
   # application launcher
   programs.rofi = import ./config/rofi/config.nix;
+
+  # direnv
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
  
   # fish
   home.file.".config/fish/themes/CatppuccinMocha.theme" = {
