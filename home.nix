@@ -59,6 +59,7 @@ in
     flyctl
     helix
     go-migrate
+    lazygit
     #unstable for newer features faster
     # unstable.postman
     unstable.lf
