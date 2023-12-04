@@ -2,6 +2,7 @@
 
 let
   unstable = import <unstable> {};
+  customNodePackages = import ./pkgs/nodePackages/default.nix {};
 in
 {
   # Home Manager needs a bit of information about you and the
@@ -50,18 +51,27 @@ in
     # development
     git
     tmux
-    postman
     hey
-    vscodium
     nodejs
+    beekeeper-studio
+    zellij
+    go
+    flyctl
+    helix
+    go-migrate
     #unstable for newer features faster
-    unstable.flyctl
-    unstable.helix
+    # unstable.postman
+    unstable.lf
+    unstable.cargo-generate
     unstable.sqlc
+    unstable.vscodium
 
     # un-categorized packages
     htop
+    wget
     vlc
+    ffmpeg-full
+    baobab
     spotify
     pavucontrol
     neofetch
@@ -75,20 +85,27 @@ in
     firefox
     brave
     unstable.discord
-    betterdiscordctl
     # slack
+    jdk17_headless
+    minecraft
+    prismlauncher
     obsidian
-    unstable.airshipper
+    obs-studio
     filezilla
+    gparted
 
-    # langservers
+    # langservers / Formatters
+    nodePackages.prettier
     nil
-    gopls
+    gopls # go
     nodePackages.typescript-language-server
-    nodePackages.vscode-json-languageserver
+    nodePackages.vscode-langservers-extracted
+    customNodePackages.svelte-language-server
+    customNodePackages."@tailwindcss/language-server"
+    nodePackages.graphql-language-service-cli
     python39Packages.pylsp-mypy
-    taplo
-    nodePackages.yaml-language-server
+    taplo # toml
+    nodePackages.yaml-language-server # yaml
     lldb
   ];
 
@@ -127,8 +144,8 @@ in
     enable = true;
     tray = true;
 
-    dawnTime = "05:30";
-    duskTime = "18:45";
+    dawnTime = "07:30";
+    duskTime = "20:45";
 
     temperature = {
       day = 5500;
@@ -168,6 +185,9 @@ in
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
       fish_config theme choose CatppuccinMocha
+      export EDITOR=hx
+      # Set PATH to add .local/bin
+      export PATH="$PATH:/home/nintron/.local/bin"
     '';
   };
   
@@ -199,6 +219,18 @@ in
     source = ./config/tmux/tmux.conf;
   };
 
-  # Go programming language
-  programs.go.enable = true;
+  # zellij
+  home.file.".config/zellij/config.kdl" = {
+    source = ./config/zellij/config.kdl;
+  };
+
+  # lf
+  home.file.".config/lf/lfrc" = {
+    source = ./config/lf/lfrc;
+  };
+
+  # custom scripts
+  home.file.".local/bin" = {
+    source = ./scripts;
+  };
 }
