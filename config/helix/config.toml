@@ -166,3 +166,9 @@ V = "paste_before"
 # Selection manipulation section #
 "A-i" = "expand_selection"
 "A-e" = "shrink_selection"
+
+[keys.select.g]
+l = "no_op"
+n = "goto_line_start"
+o = "goto_line_end"
+h = "goto_next_buffer"
